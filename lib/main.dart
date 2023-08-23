@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shorts_app/config/theme/app_theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -7,7 +8,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      title: 'TokTik',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme().getTheme(),
       home: Text("Hola mundo desde visual studio"),
     );
   }
