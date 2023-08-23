@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'TokTik',
       debugShowCheckedModeBanner: false,
       theme: AppTheme().getTheme(),
-      home: Text("Hola mundo desde visual studio"),
+      home: const Text("Hola mundo desde visual studio"),
     );
   }
 }
