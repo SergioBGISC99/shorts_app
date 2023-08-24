@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:shorts_app/config/helpers/human_formats.dart';
 import 'package:shorts_app/domain/entities/video_post.dart';
@@ -15,7 +16,19 @@ class VideoButtons extends StatelessWidget {
             value: video.likes,
             iconColor: Colors.red,
             iconData: Icons.favorite),
+        const SizedBox(
+          height: 20,
+        ),
         _CustomIconButton(value: video.views, iconData: Icons.remove_red_eye),
+        const SizedBox(
+          height: 20,
+        ),
+        SpinPerfect(
+          infinite: true,
+          duration: const Duration(seconds: 5),
+          child: const _CustomIconButton(
+              value: 0, iconData: Icons.play_circle_fill_outlined),
+        ),
       ],
     );
   }
@@ -41,7 +54,7 @@ class _CustomIconButton extends StatelessWidget {
               color: color,
               size: 30,
             )),
-        Text(HumanFormats.humanReadableNumber(value.toDouble()))
+        if (value > 0) Text(HumanFormats.humanReadableNumber(value.toDouble()))
       ],
     );
   }
