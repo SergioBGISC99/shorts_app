@@ -47,4 +47,16 @@ List<Map<String, dynamic>> videoPosts = [
     'likes': 342,
     'views': 3332,
   },
+  {
+    'name': '¿Ya llegamos a la India?... umm si',
+    'videoUrl': 'assets/videos/9.mp4',
+    'likes': 342,
+    'views': 3332,
+  },
+  {
+    'name': '¿Ya llegamos a la India?... umm si',
+    'videoUrl': 'assets/videos/10.mp4',
+    'likes': 342,
+    'views': 3332,
+  },
 ];
